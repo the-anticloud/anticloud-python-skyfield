@@ -1,0 +1,60 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:2125d942-ecff-50bd-9f2a-649c1b567426",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-06T06:52:15Z",
+    "component": {
+      "type": "application",
+      "name": "PYTHON_SKYFIELD",
+      "version": "31a6ed7584cd",
+      "bom-ref": "pkg:generic/anticloud/PYTHON_SKYFIELD@31a6ed7584cd",
+      "purl": "pkg:generic/anticloud/PYTHON_SKYFIELD@31a6ed7584cd",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "31a6ed7584cd09b6e48e07546a4b5921e1cd5bb4"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/skyfielders/python-skyfield"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "certifi",
+      "version": ">=2017.4.17",
+      "purl": "pkg:pypi/certifi@2017.4.17",
+      "bom-ref": "pypi/certifi@>=2017.4.17"
+    },
+    {
+      "type": "library",
+      "name": "jplephem",
+      "version": ">=2.13",
+      "purl": "pkg:pypi/jplephem@2.13",
+      "bom-ref": "pypi/jplephem@>=2.13"
+    },
+    {
+      "type": "library",
+      "name": "sgp4",
+      "version": ">=2.13",
+      "purl": "pkg:pypi/sgp4@2.13",
+      "bom-ref": "pypi/sgp4@>=2.13"
+    }
+  ]
+}

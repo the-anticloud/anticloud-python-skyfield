@@ -1,0 +1,554 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "PYTHON_SKYFIELD",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\SPACE_AEROTECH\\PYTHON_SKYFIELD\\UPSTREAM_CLONE",
+    "git": {
+      "head": "31a6ed7584cd09b6e48e07546a4b5921e1cd5bb4",
+      "url": "https://github.com/skyfielders/python-skyfield",
+      "branch": "master",
+      "committed_at": "2026-09-28T18:14:06-07:00"
+    }
+  },
+  "metrics": {
+    "files_total": 274,
+    "source_files_scanned": 139,
+    "lines_of_code": 28168,
+    "languages": {
+      ".py": 138,
+      ".rst": 41,
+      "(none)": 30,
+      ".png": 10,
+      ".bsp": 9,
+      ".txt": 8,
+      ".dat": 4,
+      ".npz": 4,
+      ".gz": 3,
+      ".sh": 3,
+      ".npy": 2,
+      ".json": 2,
+      ".pdf": 2,
+      ".cff": 1,
+      ".yml": 1
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 3,
+    "unique": 3,
+    "by_ecosystem": {
+      "pypi": 3
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "certifi",
+        "version": ">=2017.4.17",
+        "source_file": "setup.py",
+        "raw": "certifi>=2017.4.17"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "jplephem",
+        "version": ">=2.13",
+        "source_file": "setup.py",
+        "raw": "jplephem>=2.13"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "sgp4",
+        "version": ">=2.13",
+        "source_file": "setup.py",
+        "raw": "sgp4>=2.13"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 48,
+    "files_with_findings": 45,
+    "severity": {
+      "high": 1,
+      "medium": 1,
+      "low": 46
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "test-code.sh",
+            "line": 6,
+            "cwe": "CWE-78",
+            "snippet": "echo 'Changing to CI directory: cd' $(pwd)"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 29,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "skyfield/almanac.py",
+            "line": 202,
+            "cwe": "CWE-",
+            "snippet": "# TODO: should we work to avoid computing Topos position twice?"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/framelib.py",
+            "line": 113,
+            "cwe": "CWE-",
+            "snippet": "# TODO: taking the derivative of the instantaneous angular"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/jpllib.py",
+            "line": 282,
+            "cwe": "CWE-",
+            "snippet": "# TODO: check for nan's? or let user do that?"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/keplerlib.py",
+            "line": 54,
+            "cwe": "CWE-",
+            "snippet": "self._rotation = None  # TODO: make argument?"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/planetarylib.py",
+            "line": 252,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Figure out how to produce this rotation directly"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/positionlib.py",
+            "line": 135,
+            "cwe": "CWE-",
+            "snippet": "return cls(r, v, t)  # TODO: args for center and target?"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/projections.py",
+            "line": 41,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Computing the center should really be done using"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/searchlib.py",
+            "line": 46,
+            "cwe": "CWE-",
+            "snippet": "# TODO: pass in `y` so it can be precomputed?"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/sgp4lib.py",
+            "line": 129,
+            "cwe": "CWE-",
+            "snippet": "# TODO: once sgp4 starts filling in epochyr and epochdays in"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/timelib.py",
+            "line": 168,
+            "cwe": "CWE-",
+            "snippet": "# TODO: someday deprecate passing datetime objects here, as"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/toposlib.py",
+            "line": 123,
+            "cwe": "CWE-",
+            "snippet": "# TODO: taking the derivative of the instantaneous angular"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/units.py",
+            "line": 158,
+            "cwe": "CWE-",
+            "snippet": "# TODO: consider reworking this class to return a Rate object."
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_against_horizons.py",
+            "line": 60,
+            "cwe": "CWE-",
+            "snippet": "compare(ra.degrees, 82.36186, 0.00006) # TODO: why is this not 0.00001?"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_against_novas.py",
+            "line": 258,
+            "cwe": "CWE-",
+            "snippet": "1e-3 * meter)  # TODO: was 1e-6 before switch to modern au"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_earth_satellites.py",
+            "line": 24,
+            "cwe": "CWE-",
+            "snippet": "# TODO: try with array of dates"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_frames.py",
+            "line": 30,
+            "cwe": "CWE-",
+            "snippet": "4) == round(75.15571, 4)  # TODO: get last digit to agree?"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_jpllib.py",
+            "line": 31,
+            "cwe": "CWE-",
+            "snippet": "# TODO: SSB.at(t).observe() fails the above test."
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_keplerlib.py",
+            "line": 121,
+            "cwe": "CWE-",
+            "snippet": "# source of these angles.  TODO: can we tighten this bound and"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_planetarylib.py",
+            "line": 213,
+            "cwe": "CWE-",
+            "snippet": "# source of these angles.  TODO: Investigate how we descended from"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_positions.py",
+            "line": 176,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Get test working with these vectors too, showing it works"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_timelib.py",
+            "line": 96,
+            "cwe": "CWE-",
+            "snippet": "t = method(jd=time_value) # TODO: deprecate"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/data/text_pck.py",
+            "line": 61,
+            "cwe": "CWE-",
+            "snippet": "raise NotImplementedError('TODO: need parser for dates,'"
+          },
+          {
+            "severity": "low",
+            "file": "documentation/conf.py",
+            "line": 16,
+            "cwe": "CWE-",
+            "snippet": "# If extensions (or modules to document with autodoc) are in another directory,"
+          },
+          {
+            "severity": "low",
+            "file": "documentation/_sphinx_ext/pretty_protos.py",
+            "line": 3,
+            "cwe": "CWE-",
+            "snippet": "app.connect('autodoc-process-signature', signature)"
+          },
+          {
+            "severity": "low",
+            "file": "design/broadcasting.py",
+            "line": 122,
+            "cwe": "CWE-",
+            "snippet": "# TODO: if we work out how we can expand the time's dimensions, as"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 17,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "setup.py",
+            "line": 13,
+            "cwe": "CWE-319",
+            "snippet": "url='http://github.com/brandon-rhodes/python-skyfield/',"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/constellationlib.py",
+            "line": 6,
+            "cwe": "CWE-319",
+            "snippet": "http://cdsarc.u-strasbg.fr/viz-bin/Cat?VI/42"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/elementslib.py",
+            "line": 236,
+            "cwe": "CWE-319",
+            "snippet": "# https://web.archive.org/web/*/http://ccar.colorado.edu/asen5070/handouts/cart2kep2002.pdf"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/geometry.py",
+            "line": 17,
+            "cwe": "CWE-319",
+            "snippet": "# See http://paulbourke.net/geometry/circlesphere/index.html#linesphere"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/keplerlib.py",
+            "line": 317,
+            "cwe": "CWE-319",
+            "snippet": "delta_t = sqrt(2 * p**3 / gm) * M # from http://www.bogan.ca/orbits/kepler/orbteqtn.html"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_almanac.py",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "# http://aa.usno.navy.mil/cgi-bin/aa_moonill2.pl?form=1&year=2018&task=00&tz=-05"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/tests/test_earth_satellites.py",
+            "line": 53,
+            "cwe": "CWE-319",
+            "snippet": "# http://www.celestrak.org/publications/AIAA/2006-6753/AIAA-2006-6753-Rev2.pdf"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/data/earth_orientation.py",
+            "line": 12,
+            "cwe": "CWE-319",
+            "snippet": "f = load.open('http://eclipse.gsfc.nasa.gov/SEcat5/deltat.html')"
+          },
+          {
+            "severity": "low",
+            "file": "skyfield/data/hipparcos.py",
+            "line": 3,
+            "cwe": "CWE-319",
+            "snippet": "# URL = 'http://cdsarc.u-strasbg.fr/ftp/cats/I/239/hip_main.dat.gz'"
+          },
+          {
+            "severity": "low",
+            "file": "examples/charting.py",
+            "line": 150,
+            "cwe": "CWE-319",
+            "snippet": "# http://aa.usno.navy.mil/software/mica/USNO-AA-TN-2003-04.pdf"
+          },
+          {
+            "severity": "low",
+            "file": "design/delta_t.py",
+            "line": 76,
+            "cwe": "CWE-319",
+            "snippet": "#url = 'http://astro.ukho.gov.uk/nao/lvm/Table-S15-v18.txt'"
+          },
+          {
+            "severity": "low",
+            "file": "design/sunrise.py",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "# http://slittlefair.staff.shef.ac.uk/teaching/phy115/session3/page4/page6/page6.html"
+          },
+          {
+            "severity": "low",
+            "file": "contrib/almanac2/test_almanac2.py",
+            "line": 80,
+            "cwe": "CWE-319",
+            "snippet": "# web.archive.org/web/20171223014917/http://aa.usno.navy.mil/data/docs/EarthSeasons.php"
+          },
+          {
+            "severity": "low",
+            "file": "builders/build_arrays.py",
+            "line": 48,
+            "cwe": "CWE-319",
+            "snippet": "url = 'http://astro.ukho.gov.uk/nao/lvm/Table-S15.2020.txt'"
+          },
+          {
+            "severity": "low",
+            "file": "builders/build_constellations.py",
+            "line": 7,
+            "cwe": "CWE-319",
+            "snippet": "http://cdsarc.u-strasbg.fr/viz-bin/Cat?VI/42"
+          },
+          {
+            "severity": "low",
+            "file": "builders/logo.py",
+            "line": 7,
+            "cwe": "CWE-319",
+            "snippet": "# wget http://tdc-www.harvard.edu/catalogs/bsc5.dat.gz"
+          },
+          {
+            "severity": "low",
+            "file": "builders/strip_woff.py",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "# http://stackoverflow.com/questions/14557944/downsizing-an-otf-font-by-removing-glyphs"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "skyfield/iokit.py",
+            "line": 486,
+            "cwe": "CWE-918",
+            "snippet": "connection = urlopen(url, context=ssl_context)"
+          }
+        ]
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 1,
+    "files_with_findings": 1,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "examples/charting.py",
+            "line": 160,
+            "cwe": "CWE-",
+            "snippet": "#'#a69276'  # chroma('#d8c2a5').darken().hex()"
+          }
+        ]
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:2125d942-ecff-50bd-9f2a-649c1b567426",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T06:52:15Z",
+      "component": {
+        "type": "application",
+        "name": "PYTHON_SKYFIELD",
+        "version": "31a6ed7584cd",
+        "bom-ref": "pkg:generic/anticloud/PYTHON_SKYFIELD@31a6ed7584cd",
+        "purl": "pkg:generic/anticloud/PYTHON_SKYFIELD@31a6ed7584cd",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "31a6ed7584cd09b6e48e07546a4b5921e1cd5bb4"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/skyfielders/python-skyfield"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "certifi",
+        "version": ">=2017.4.17",
+        "purl": "pkg:pypi/certifi@2017.4.17",
+        "bom-ref": "pypi/certifi@>=2017.4.17"
+      },
+      {
+        "type": "library",
+        "name": "jplephem",
+        "version": ">=2.13",
+        "purl": "pkg:pypi/jplephem@2.13",
+        "bom-ref": "pypi/jplephem@>=2.13"
+      },
+      {
+        "type": "library",
+        "name": "sgp4",
+        "version": ">=2.13",
+        "purl": "pkg:pypi/sgp4@2.13",
+        "bom-ref": "pypi/sgp4@>=2.13"
+      }
+    ]
+  },
+  "elapsed_seconds": 28.16
+}
